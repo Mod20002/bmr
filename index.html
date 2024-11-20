@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คำนวณ BMR, TDEE และปริมาณคาร์บ</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <h1>คำนวณ BMR, TDEE และปริมาณคาร์โบไฮเดรต</h1>
+  <form id="calculatorForm">
+    <label for="age">อายุ (ปี):</label>
+    <input type="number" id="age" placeholder="เช่น 25" required>
+
+    <label for="weight">น้ำหนักตัว (กิโลกรัม):</label>
+    <input type="number" id="weight" placeholder="เช่น 60" required>
+
+    <label for="height">ส่วนสูง (เซนติเมตร):</label>
+    <input type="number" id="height" placeholder="เช่น 170" required>
+
+    <label for="gender">เพศ:</label>
+    <select id="gender" required>
+      <option value="male">ชาย</option>
+      <option value="female">หญิง</option>
+    </select>
+
+    <label for="activity">ระดับกิจกรรม:</label>
+    <select id="activity" required>
+      <option value="1.2">นั่งทำงานอยู่กับที่</option>
+      <option value="1.375">ออกกำลังกายเบา (1-3 ครั้ง/สัปดาห์)</option>
+      <option value="1.55">ออกกำลังกายปานกลาง (3-5 ครั้ง/สัปดาห์)</option>
+      <option value="1.725">ออกกำลังกายหนัก (6-7 ครั้ง/สัปดาห์)</option>
+      <option value="1.9">ออกกำลังกายหนักมากหรือทำงานใช้แรง</option>
+    </select>
+
+   
+    <button type="button" onclick="calculate()">คำนวณ</button>
+    <button id="refreshBtn" onclick="refreshPage()">Refresh</button>
+
+  </form>
+
+  <div class="result" id="result"></div>
+
+  <script src="./script.js">
+   
+  </script>
+</body>
+</html>
